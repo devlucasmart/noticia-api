@@ -19,7 +19,7 @@ Este é um projeto de página web desenvolvido utilizando o framework Express, u
 1. **Clone o Repositório**: Faça uma cópia do repositório para sua máquina local utilizando o comando `git clone`.
 2. **Instale as Dependências**: Navegue até o diretório do projeto e execute `npm install` para instalar todas as dependências listadas no arquivo `package.json`.
 3. **Configuração do Banco de Dados**: Configure as informações de conexão com o banco de dados MySQL no arquivo `/config/dbConnection.js`.
-4. **Executar o Servidor**: Inicie o servidor executando `node app.js`.
+4. **Executar o Servidor**: Inicie o servidor executando `nodemon app.js`.
 5. **Acesse a Página Web**: Abra um navegador e acesse `http://localhost:3000` para visualizar a página de cadastro e exposição de notícias.
 
 ## Contribuindo
