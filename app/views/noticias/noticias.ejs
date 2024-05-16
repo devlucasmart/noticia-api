@@ -13,6 +13,9 @@
                 <th>ID</th>
                 <th>Título</th>
                 <th>Notícia</th>
+                <th>Resumo</th>
+                <th>Autor</th>
+                <th>Data da Noticia</th>
             </tr>
         </thead>
         <tbody>
@@ -21,6 +24,13 @@
                     <td><%= noticias[i].id %></td>
                     <td><%= noticias[i].titulo %></td>
                     <td><%= noticias[i].noticia %></td>
+                    <td><%= noticias[i].resumo %></td>
+                    <td><%= noticias[i].autor %></td>
+                    <td>
+                        <% if (noticias[i].data_noticia !== null) { %>
+                            <%= new Date(noticias[i].data_noticia).toLocaleDateString('pt-BR') %>
+                        <% } %>
+                    </td>
                 </tr>
             <% } %>
         </tbody>

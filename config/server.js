@@ -1,15 +1,18 @@
 var express = require('express');
-var consing = require('consign');
+var consign = require('consign');
 var bodyParser = require('body-parser');
+const expressValidator = require('express-validator')
 
 var app = express();
+
 app.set('view engine', 'ejs');
 app.set('views', './app/views');
 
-app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(expressValidator());
 
-consing()
-    .include('./app/routes')
+consign()
+    .include('app/routes')
     .then('config/dbConnection.js')
     .then('app/models')
     .into(app);
